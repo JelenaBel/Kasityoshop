@@ -90,50 +90,40 @@ session_start();
 		Etunimi:*
 		
 
-		<td><input type = "text" class="registerLomake" name = "etunimi" required></td></tr>
-		<tr>
-		<td class="tabledata">Sukunimi:* </td>
+		<input type = "text" class="registerLomake" name = "etunimi" required>
 		
-		<td class="tabledata"><input type = "text" class="registerLomake" name = "sukunimi" required ></td></tr>
+		Sukunimi:* 
 		
-        <tr>
- 		<td class="registerLomake">E-mail:*</td> 
+		<input type = "text" class="registerLomake" name = "sukunimi" required >
+		
+        E-mail:*
 
-        <td class="registerLomake"><input type = "text" class="registerLomake" name ="email" required></td></tr>
-        
-        <tr>
-        <td class="registerLomake">Salasana:* </td>
+        <input type = "text" class="registerLomake" name ="email" required>
+        Salasana:* 
 		
 		
-        <td class="registerLomake"><input type="password" class="registerLomake"  name="salasana" required></td></tr>
+        <input type="password" class="registerLomake"  name="salasana" required>
 	
     
-    <tr>
-    <td class="registerLomake">Puhelinnumero: </td>
+    Puhelinnumero: 
 		
-    <td><input type = "text" class="registerLomake" name ="puhelinnumero"></td></tr>
+    <input type = "text" class="registerLomake" name ="puhelinnumero">
         
-        <tr>
-        <td class="registerLomake">Katuosoitte:</td>
-        <td><input type = "text" class="registerLomake" name ="katuosoitte"></td></tr>
+        Katuosoitte:
+       <input type = "text" class="registerLomake" name ="katuosoitte">
         
 
-        <tr> 
-
-        <td class="registerLomake">Postinumero: </td>
+        Postinumero: 
 		
-        <td><input type = "text" class="registerLomake" name ="postinumero"></td></tr>
+        <input type = "text" class="registerLomake" name ="postinumero">
         
-        <tr>
-        <td class="registerLomake">Postitoimituspaikka: </td>
+        Postitoimituspaikka: 
 		
-        <td><input type = "text" class="registerLomake" name ="postitoimituspaikka"></td></tr>
+        <input type = "text" class="registerLomake" name ="postitoimituspaikka">
         
        <br><br>
-        <tr>
-        <td>  </td><td> <input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit"></td></tr>
-        <tr>   
-          <td> </td> <td><span  class = "msg"> 
+         <input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit">
+        <span  class = "msg"> 
             <?php 
 			if(isset($_SESSION['message_register'])){
 		    echo $_SESSION['message_register']; 
@@ -142,8 +132,8 @@ session_start();
 
             ?>
 
-</span></td>  
-</table>
+</span>
+
        </fieldset>
        </form>
 	   <span  class= "myyjalleLink"> <a href="RekisteroiduMyyjalle.php"> Rekisteroidu myyjaksi</a></span>
