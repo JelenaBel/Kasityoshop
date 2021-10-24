@@ -215,7 +215,7 @@ try {
     $mail->Password = 'Kokoshnik45';
 
     //Recipients
-    $mail->setFrom('obyelousova@gmail.com', 'Puutarha Neilikka');
+    $mail->setFrom('obyelousova@gmail.com', 'KasityoShop');
     $mail->addAddress($email, $fname);     //Add a recipient
 
     //Attachments

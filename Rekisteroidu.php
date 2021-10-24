@@ -82,19 +82,19 @@ session_start();
 
 	<section class = "sectionMyymälät">
 
-	<form method="post"  action="<?php echo $_SERVER['PHP_SELF']?>">
-	<fieldset class="registerLomake">
+	<form  method="post"  action="<?php echo $_SERVER['PHP_SELF']?>">
+	<fieldset class = "sectionMyymälät">
     <legend>Rekisteröitymislomake</legend>
-		<table>
-		<tr>
-		<td class="registerLomake">Etunimi:*</td>
+		
+		
+		Etunimi:*
 		
 
 		<td><input type = "text" class="registerLomake" name = "etunimi" required></td></tr>
 		<tr>
-		<td class="registerLomake">Sukunimi:* </td>
+		<td class="tabledata">Sukunimi:* </td>
 		
-		<td class="registerLomake"><input type = "text" class="registerLomake" name = "sukunimi" required ></td></tr>
+		<td class="tabledata"><input type = "text" class="registerLomake" name = "sukunimi" required ></td></tr>
 		
         <tr>
  		<td class="registerLomake">E-mail:*</td> 
@@ -135,8 +135,10 @@ session_start();
         <tr>   
           <td> </td> <td><span  class = "msg"> 
             <?php 
-            echo $_SESSION['message_register']; 
+			if(isset($_SESSION['message_register'])){
+		    echo $_SESSION['message_register']; 
             unset ($_SESSION['message_register']);
+			}
 
             ?>
 

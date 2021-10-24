@@ -123,8 +123,12 @@ h1{
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
-    display: block;
+    display: block;}
+  .tableRegister{
+    width:80%;
+
   }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -160,7 +164,29 @@ h1{
   
 }
 
+.tableRegister {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+    max-width: 250px;
 
+}
+.tabledata{
+  font-weight: bold;
+  font-family: Gabriola;
+  font-size: 25px;
+ 
+  
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Gabriola;
+  font-size: 25px;
+
+  
+
+}
 /*FRONT PAGE*/
 .tervettuloa{
     align-items: center;
@@ -678,7 +704,8 @@ p{
   font-family: Gabriola;
   font-size: 25px;
   grid-template-columns: subgrid;
-  
+  width: 80%;
+    border-color: lightgrey;
   align-items: center;
   justify-content: center;
  
