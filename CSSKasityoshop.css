@@ -705,14 +705,12 @@ p{
   font-size: 25px;
   grid-template-columns: subgrid;
   width: 80%;
-    border-color: lightgrey;
+  border-color: lightgrey;
   align-items: center;
   justify-content: center;
- 
   font-weight: bold;
   font-family: Gabriola;
   font-size: 25px;
-
   word-wrap: unset;
   white-space: nowrap;
 

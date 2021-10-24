@@ -129,7 +129,7 @@ session_start();
 		
         <td><input type = "text" class="registerLomake" name ="postitoimituspaikka"></td></tr>
         
- 
+       <br><br>
         <tr>
         <td>  </td><td> <input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit"></td></tr>
         <tr>   
