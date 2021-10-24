@@ -27,7 +27,7 @@ session_start();
 	
 
 <div  class="topnav" id="myTopnav">
-	<a  href="KasityoshopFrontPage.php">
+	<a  href="index.php">
 	Etusivu
 </a>
 
@@ -95,68 +95,57 @@ echo "<a  href='Logout.php'> Logout </a>";
 	<section class = "sectionMyymälät">
 
 	<form method="post"  action="<?php echo $_SERVER['PHP_SELF']?>">
-	<fieldset class="registerLomake">
+	<fieldset class="sectionMyymälät">
     <legend>Rekisteröitymislomake</legend>
-		<table>
-		<tr>
-		<td class="registerLomake">Etunimi:*</td>
+		Etunimi:*
 		
 
-		<td><input type = "text" class="registerLomake" name = "etunimi" required></td></tr>
-		<tr>
-		<td class="registerLomake">Sukunimi:* </td>
+		<input type = "text" class="registerLomake" name = "etunimi" required>
 		
-		<td class="registerLomake"><input type = "text" class="registerLomake" name = "sukunimi" required ></td></tr>
+		Sukunimi:* 
 		
-        <tr>
- 		<td class="registerLomake">E-mail:*</td> 
+		<input type = "text" class="registerLomake" name = "sukunimi" required >
+		
+        E-mail:*
 
-        <td class="registerLomake"><input type = "text" class="registerLomake" name ="email" required></td></tr>
-        
-        <tr>
-        <td class="registerLomake">Salasana:* </td>
+		<input type = "text" class="registerLomake" name ="email" required>
 		
-		
-        <td class="registerLomake"><input type="password" class="registerLomake"  name="salasana" required></td></tr>
+		Salasana:* 
+
+		<input type="password" class="registerLomake"  name="salasana" required>
 	
     
-    <tr>
-    <td class="registerLomake">Puhelinnumero: </td>
+    Puhelinnumero: 
 		
-    <td><input type = "text" class="registerLomake" name ="puhelinnumero"></td></tr>
-        
-        <tr>
-        <td class="registerLomake">Katuosoitte:</td>
-        <td><input type = "text" class="registerLomake" name ="katuosoitte"></td></tr>
-        
+    <input type = "text" class="registerLomake" name ="puhelinnumero">
+	
+	Katuosoitte:
+	
+	<input type = "text" class="registerLomake" name ="katuosoitte">
+	
+	Postinumero: 
 
-        <tr> 
-
-        <td class="registerLomake">Postinumero: </td>
+	<input type = "text" class="registerLomake" name ="postinumero">
+	
+	Postitoimituspaikka: 
+	
+	<input type = "text" class="registerLomake" name ="postitoimituspaikka">
+	<br>
+	
+	<input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit">
 		
-        <td><input type = "text" class="registerLomake" name ="postinumero"></td></tr>
-        
-        <tr>
-        <td class="registerLomake">Postitoimituspaikka: </td>
-		
-        <td><input type = "text" class="registerLomake" name ="postitoimituspaikka"></td></tr>
-        
- 
-        <tr>
-        <td>  </td><td> <input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit"></td></tr>
-        <tr>   
-          <td> </td> <td><span  class = "msg"> 
+	<span  class = "msg"> 
             <?php 
             /*echo $_SESSION['message_register']; 
             unset ($_SESSION['message_register']);*/
 
             ?>
 
-</span></td>  
-</table>
+</span>
        </fieldset>
        </form>
-	   <span  class= "myyjalleLink"> <a href="RekisteroiduMyyjalle.php"> Rekisteroidu myyjaksi</a></span>
+	   
+	   <br>
 	   <span  class= "myyjalleLink"> <a href="KirjauduMyyjalle.php"> Kirjaudu myyjaksi</a></span>
 </section>
 

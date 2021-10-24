@@ -27,11 +27,11 @@ session_start();
 	
 
 <div  class="topnav" id="myTopnav">
-	<a  href="KasityoshopFrontPage.html">
+	<a  href="index.php">
 	Etusivu
 </a>
 
-<a  href="CatalogKasityoshop.html">
+<a  href="CatalogKasityoshop.php">
 	Online-shop
 </a>
 
@@ -64,6 +64,7 @@ if (isset($_SESSION['currentUserNameMyyjat'])) {
 } else
 if (isset ($_SESSION['currentUserName'])){
 echo "<a href='OmaProfiliini.php'>Oma profiilini</a>";
+echo "<a  href='Logout.php'> Logout </a>";
 }
 
   ?>
@@ -120,51 +121,31 @@ if (isset ($_SESSION['asiakasID'])){
                 
                 
                 
-              <fieldset class='registerLomake'>
+              <section class = 'sectionOmaProfiilini'>
+              <form>
+<fieldset class='sectionOmaProfiilini'>
                 <legend>Oma profiliini</legend>
-		<table>
-		<tr>
-		<td class='registerLomake'>Etunimi:*</td>
-		
-
-		<td class='registerLomake' >".$userEtunimi."</td></tr>
-		<tr>
-		<td class='registerLomake'>Sukunimi: </td>
-		
-		<td class='registerLomake'>".$userSukunimi."</td></tr>
-		
-        <tr>
- 		<td class='registerLomake'>E-mail:</td> 
-
-        <td class='registerLomake'>".$email." </td></tr>
+                <span class='registerLomake' >Etunimi:*	 ".$userEtunimi."</span>
+                <br>
+                <span class='registerLomake' >Sukunimi:  ".$userSukunimi."</span>
+                <br>
+                <span class='registerLomake' >E-mail:  ".$email." </span>
+                <br>             
+                <span class='registerLomake' >Salasana:  ".$Asalasana."</span>
+                <br>   
+	              <span class='registerLomake' >Puhelinnumero: ".$apuhelin." </span>
+                <br>   
         
-        <tr>
-        <td class='registerLomake'>Salasana: </td>
-		
-		
-        <td class='registerLomake'>".$Asalasana."</td></tr>
-	
-    
-    <tr>
-    <td class='registerLomake'>Puhelinnumero: </td>
-		
-    <td class='registerLomake'>".$apuhelin." </td></tr>
-        
-        <tr>
-        <td class='registerLomake'>Katuosoitte:</td>
-        <td class='registerLomake' >".$Akatu."</td></tr>
+    <span class='registerLomake' > Katuosoitte:".$Akatu."</span>
+    <br>   
         
 
-        <tr> 
+       
 
-        <td class='registerLomake'>Postinumero: </td>
-		
-        <td class='registerLomake'>".$Aposti."</td></tr>
+    <span class='registerLomake' >Postinumero:   ".$Aposti."</span>
+    <br>     
         
-        <tr>
-        <td class='registerLomake'>Postitoimituspaikka: </td>
-		
-        <td class='registerLomake' >".$Apaikka."</td></tr></table></fieldset>";
+    <span class='registerLomake' > Postitoimituspaikka: ".$Apaikka."</span></fieldset></form></section>";
 
             }
       

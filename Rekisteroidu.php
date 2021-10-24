@@ -77,14 +77,15 @@ session_start();
 <a href="#" class="fa fa-twitter"></a>
 <br><br>
 
-<h2 class = "headerCatalog">Rekisterointi</h2>
+<h2 class = "headerCatalog"> Asiakas rekisterointi</h2>
 
 
 	<section class = "sectionMyymälät">
+		Rekisteroidamaan myyjaksi painaa <span  class= "myyjalleLink"> <a href="RekisteroiduMyyjalle.php"> Rekisteroidu myyjaksi</a></span>
 
 	<form  method="post"  action="<?php echo $_SERVER['PHP_SELF']?>">
 	<fieldset class = "sectionMyymälät">
-    <legend>Rekisteröitymislomake</legend>
+    <legend>Asiakas rekisterointi</legend>
 		
 		
 		Etunimi:*
@@ -136,7 +137,7 @@ session_start();
 
        </fieldset>
        </form>
-	   <span  class= "myyjalleLink"> <a href="RekisteroiduMyyjalle.php"> Rekisteroidu myyjaksi</a></span>
+	   <br>
 	   <span  class= "myyjalleLink"> <a href="KirjauduMyyjalle.php"> Kirjaudu myyjaksi</a></span>
 </section>
 

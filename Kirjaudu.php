@@ -32,11 +32,11 @@ session_start();
 	
 
 <div  class="topnav" id="myTopnav">
-	<a  href="KasityoshopFrontPage.html">
+	<a  href="index.php">
 	Etusivu
 </a>
 
-<a  href="CatalogKasityoshop.html">
+<a  href="CatalogKasityoshop.php">
 	Online-shop
 </a>
 
@@ -111,43 +111,31 @@ echo "<a  href='Logout.php'> Logout </a>";
 
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
 
-<fieldset class="registerLomake">
+<fieldset class="sectionMyymälät">
 <legend>Kirjaudu sisään</legend>
-    <table>
-    <tr>
-    <td class="registerLomake">Login (e-mail):*</td>
     
+Login (e-mail):*
+<input type = "text" class="registerLomake" name = "email" required>
+  
+Salasana:*
 
-    <td><input type = "text" class="registerLomake" name = "email" required></td></tr>
+<input type="password" class="registerLomake"  name="salasana"  required>
 
-    <tr>
-    <td class="registerLomake">Salasana:* </td>
-    
-    
-    <td class="registerLomake"><input type="password" class="registerLomake"  name="salasana"  required></td></tr>
-    <tr>
-        <td></td>
-        <td> <label>
+<label>
       <input type="checkbox"  checked="checked" name="remember"> Remember me
-    </label>   </td> 
+    </label>   
+    <span class="psw"> <a href="#"> Forgot password?</a></span>
+    
+    <input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit"></input> 
+    <br>
+    <button type="button" class= "myyjalleLink">Cancel</button> 
 
-
-
-    <tr>
-        <td></td> <td> <span class="psw"> <a href="#"> Forgot password?</a></span></td></tr>
-        <tr>
-    <td></td>
-    <td> <input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit"></input> <button type="button" class= "myyjalleLink">Cancel</button> </td></tr>
-
-    <tr>
-        <td> </td> <td>  <span class="psw"> Don't have an account?  <a href="Rekisteroidu.php"> Register here</a></span></td></tr>
-        <tr>
-        <td> </td> <td>  <span  class= "myyjalleLink"> <a href="KirjauduMyyjalle.php"> Kirjautuminen myyjalle</a></span></td></tr>
+    <span class="psw"> Don't have an account?  <a href="Rekisteroidu.php"> Register here</a></span>
+    <span  class= "myyjalleLink"> <a href="KirjauduMyyjalle.php"> Kirjautuminen myyjalle</a></span>
 
         
         
-     <tr>   
-          <td> </td> <td><span  class = "msg"> 
+     <span  class = "msg"> 
             <?php 
             if (isset ($_SESSION['message'])){
             echo $_SESSION['message']; 
@@ -156,8 +144,7 @@ echo "<a  href='Logout.php'> Logout </a>";
 
             ?>
 
-</span></td>  
-</table>
+</span>
 
    </fieldset>
    

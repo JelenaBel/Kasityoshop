@@ -27,7 +27,7 @@ session_start();
 	
 
 <div  class="topnav" id="myTopnav">
-	<a  href="KasityoshopFrontPage.php">
+	<a  href="index.php">
 	Etusivu
 </a>
 
@@ -66,6 +66,7 @@ session_start();
 }else
 if (isset ($_SESSION['currentUserName'])){
 echo "<a href='OmaProfiliini.php'>Oma profiilini</a>";
+echo "<a  href='Logout.php'> Logout </a>";
 }
   
 

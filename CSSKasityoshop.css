@@ -283,6 +283,9 @@ h1{
     align-items: flex-start;
     max-width: 250px;
   }
+  .display-imgtietoa{
+
+  }
   
   
   .uutisetBody{
@@ -434,10 +437,23 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
 
   
   
 
+}
+
+.sectionOmaProfiilini{
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+ 
 }
 
 .myymäläFlex {
@@ -518,7 +534,7 @@ p{
 }
 
 .tietoaMeistaFrontPage{
-  display: flex;
+  display: flexbox;
   flex-wrap: wrap;
   flex-direction: row;
   padding-left: 20px;
@@ -713,6 +729,7 @@ p{
   font-size: 25px;
   word-wrap: unset;
   white-space: nowrap;
+  border-width: 1px;
 
 }
 .cancelbtn { 

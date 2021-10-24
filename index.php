@@ -1,11 +1,10 @@
+
+
 <?php
 session_start();
 
 
-@include('KirjauduSisäänMyyjalle.php');
-
 ?>
-
 <!DOCTYPE html>
 
 
@@ -30,14 +29,13 @@ session_start();
 	
 
 <div  class="topnav" id="myTopnav">
-	<a  href="index.php">
+	<a  href="KasityoshopFrontPage.php">
 	Etusivu
 </a>
 
-<a  href="CatalogKasityoshop.html">
+<a  href="CatalogKasityoshop.php">
 	Online-shop
 </a>
-
 
 
 <a  href="Myyjalle.php">
@@ -54,7 +52,6 @@ session_start();
 <a id = "rekisteroidu" href="Kirjaudu.php">
 	Kirjaudu 
 	</a>
-
 	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i>
 	  </a>
@@ -62,17 +59,18 @@ session_start();
 	
 	  <a class = "iLoveMyBasket" href = "ShoppingCard.php"><i class="fa fa-shopping-basket" style="font-size:25px;color:black; position: relative; padding-top: 0px; padding-left: 0px;" ></i></a>
 
-    <?php
+      <?php
+     if (isset($_SESSION['currentUserNameMyyjat'])) {
+  echo "<a  href='AddProduct.php'>Add Product</a>";
+  echo "<a href='OmaProfiliiniMyyja.php'>Oma Profiliini</a>";
 
-if (isset($_SESSION['currentUserNameMyyjat'])) {
-echo "<a  href='AddProduct.php'>Add Product</a>";
-echo "<a href='OmaProfiliini.php'>Oma Profiliini</a>";
-echo "<a  href='Logout.php'> Logout </a>";
-}else
+}
+
 if (isset ($_SESSION['currentUserName'])){
 echo "<a href='OmaProfiliini.php'>Oma profiilini</a>";
 echo "<a  href='Logout.php'> Logout </a>";
 }
+  
 
   ?>
 </div>
@@ -89,10 +87,10 @@ echo "<a  href='Logout.php'> Logout </a>";
 
 </section>
 
-
-
 <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
+
+<br>
 <span  class = "msgcurretnUserName"> 
             <?php 
             if (isset($_SESSION['currentUserNameMyyjat'])) {
@@ -107,55 +105,67 @@ echo "<a  href='Logout.php'> Logout </a>";
 
 <br><br>
 
-	<h2 class = "headerCatalog">Kirjaudu Myyja</h2>
+	<br>
+	<h2 class = "headerCatalog">Meidän uutiset</h2>
 
-    <section class = "sectionMyymälät">
 
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+	
+	<section class = "sectionUutiset">
 
-<fieldset class="sectionMyymälät">
+		<div class = "uutisetBoxes">
+		
+	<article class= "uutisetFrontPage">
 
-<legend>Kirjaudu Myyja</legend>
-Login (e-mail):*
-<input type = "text" class="registerLomake" name = "email" required>
-  
-Salasana:*
+	<div class = "uutisetImage">
+		<img class = "display-imgnews" src="Kyntiloita.jpg"  >
+	</div>
 
-<input type="password" class="registerLomake"  name="salasana"  required>
+	<div class = "uutisetBody">
 
-<label>
-      <input type="checkbox"  checked="checked" name="remember"> Remember me
-    </label>   
-    <span class="psw"> <a href="#"> Forgot password?</a></span>
-    
-    <input type = "submit" class= "myyjalleLink"   name = "Submit" value = "Submit"></input> 
-    <br>
-    <button type="button" class= "myyjalleLink">Cancel</button> 
-
-    <span class="psw"> Don't have an account?  <a href="RekisteroiduMyyjalle.php"> Register here</a></span>
-        
-
-        
-        
-     <span  class = "msg"> 
-            <?php 
-            if (isset ($_SESSION['message'])){
-            echo $_SESSION['message']; 
-            unset ($_SESSION['message']);
-            }
-
-            ?>
-
-</span>
-
-   </fieldset>
-   
-   </form>
-</section>
+	<h2 class= "titleUutiset"> Hyvää uutta vuotta! Uuden vuoden kunniaksi myymälöissämme upeita tarjouksia.    </h2><br>
+    <h2 class= "titleUutiset"> 2.1.2016 </h2>
 
 	</div>
 
+
+</article>
+	
+<article class= "uutisetFrontPage">
+	<div class = "uutisetImage">
+		<img class = "display-imgnews" src="HomeDecorations.png"  >
+	</div>
+	
+	
+	 <div class = "uutisetBody">
+	
+	<h2 class= "titleUutiset">  Joulukukat edullisesti meiltä. Myymälöissämme myös kattava ja edullinen valikoima joulukuusia.</h2><br>
+	<h2 class= "titleUutiset">  14.12.2015 </h2>
+
+	</div>
+	
+</article>
+
+	<article class= "uutisetFrontPage">
+		<div class = "uutisetImage">
+			<img class = "display-imgnews" src="ForKids.png"  >
+		</div>
+
+	 <div class = "uutisetBody">
+	 
+	<h2 class= "titleUutiset"> Nyt on hyvä aika aloittaa puutarhan valmistelu talven lepokautta varten. Meiltä löydät kaikki työkalut ja tarvikkeet. </h2>
+	<br><h2 class= "titleUutiset"> 1.9.2015 </h2> 
+</div>
+	
+	
+</article>
+</div>
+
+
+
+
+</section>
+
+
 </body>
 
-
-
+</html>
