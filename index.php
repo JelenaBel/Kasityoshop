@@ -29,7 +29,7 @@ session_start();
 	
 
 <div  class="topnav" id="myTopnav">
-	<a  href="KasityoshopFrontPage.php">
+	<a  href="index.php">
 	Etusivu
 </a>
 

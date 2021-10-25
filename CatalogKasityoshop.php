@@ -41,7 +41,7 @@ session_start();
 	Myyjälle
 </a>
 
-<a  href="Tietoa-meista.html">
+<a  href="Tietoa-meista.php">
 	Meistä
 </a>
 

@@ -284,7 +284,9 @@ h1{
     max-width: 250px;
   }
   .display-imgtietoa{
-
+    display:inline-block;
+    align-items: flex-start;
+    max-width: 400px;
   }
   
   
@@ -518,7 +520,8 @@ p{
 .titleTietoa{
   display: inline-block;
   font-size: 25px;
-  line-height: 1;
+ 
+  
 
 
   
@@ -534,7 +537,7 @@ p{
 }
 
 .tietoaMeistaFrontPage{
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   padding-left: 20px;

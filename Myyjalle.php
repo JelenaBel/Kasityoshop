@@ -92,8 +92,7 @@ echo "<a  href='Logout.php'> Logout </a>";
 	<div class= "tietoaMeistaFrontPage">
 	<div class = "tietoaMeistaImage">
 		<img class = "display-imgtietoa" src="ForSellers.jpg"  >
-	</div>
-	
+		</div>
 	
 	 <div class = "tietoaBody">
 	
