@@ -30,7 +30,7 @@ if ($handled == true){
 }
 
 function form_sent() {
-    echo "Проверяеь фугкцию проверки отправки формы";
+    
         return isset($_POST['Submit']);
    
   }
